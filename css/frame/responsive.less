@@ -1,0 +1,46 @@
+@breakpointLargeMin: @breakpointLarge+1;
+@breakpointMediumMin: @breakpointMedium+1;
+@breakpointSmallMin: @breakpointSmall+1;
+@breakpointMiniMin: @breakpointMini + 1;
+
+.visbileClass(@media){
+  (~".v-@{media}-hidden") {
+	display: none !important;
+  }
+  (~".v-@{media}-visible") {
+	display: block;
+  }
+}
+
+//Large display and up
+//XLarge
+@media only screen and (min-width: @breakpointLargeMin) {
+  .visbileClass('xlarge');
+}
+
+//Desktop to Large display
+//Large
+@media only screen and (min-width: @breakpointMediumMin) and (max-width: @breakpointLarge) {
+  .visbileClass('large');
+}
+
+//Tablet to desktop
+//Medium
+@media only screen and (min-width: @breakpointSmallMin) and (max-width: @breakpointMedium) {
+  .visbileClass('medium');
+}
+
+//Mobile phone to tablet
+//Small
+@media only screen and (min-width: @breakpointMiniMin) and (max-width: @breakpointSmall) {
+  .visbileClass('small');
+}
+
+//Mobile phone
+//Mini
+@media only screen and(max-width: @breakpointMini) {
+  .visbileClass('mini');
+  .col{
+	width:100%;
+  }
+}

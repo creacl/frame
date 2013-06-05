@@ -1,0 +1,109 @@
+/**
+*
+* Variables by moduls
+* Changing values in this file or from main style file
+*
+**/
+
+//Typo
+//typo.less
+@textSize:1em;
+
+//Link variables
+@linkDefColor: #4097cf;
+@linkHoverColor:darken(@linkDefColor,20%);
+@linkVisitedColor:@linkDefColor;
+@linkActiveColor:darken(@linkHoverColor,10%);
+
+.linkStyle(@def:@linkDefColor,@hover:@linkHoverColor,@active:@linkActiveColor,@visited:@linkVisitedColor,@underline:none,@setvisited:false){
+  text-decoration: @underline;
+  color:@def;
+  &:hover{
+	color:@hover;
+  }
+  &:active{
+	color:@active;
+  }
+  &:visited{
+	.visited(@setvisited) when (@setvisited = true){
+	  color:@visited;
+	}
+	.visited(@setvisited);
+  }
+}
+
+//Text default style
+.defFontStyle(@fontFamily:'PT Sans'){
+  font-family: @fontFamily;
+  font-size:@textSize;
+}
+
+//Header variables
+@headerSizeMax:200%;
+@headerSizeLower:100%;
+@headerCount:6;
+@headerDefColor:#000;
+@headerColorize:true;
+
+.headerFontStyle(@fontFamily:'PT Sans Narrow'){
+  font-family: @fontFamily;
+  font-size:@textSize;
+  margin-bottom:@textSize / 4;
+}
+
+
+/******************************************/
+
+//Form elements
+//form.less
+.formFont{
+  .defFontStyle();
+  line-height:1em;
+}
+@formDefColor:#666;
+@formHoverColor:darken(@formDefColor,10%);
+@formFocusColor:darken(@formDefColor,20%);
+
+@formDefBorderColor:#ccc;
+@formHoverBorderColor:darken(@formDefBorderColor,10%);
+@formFocusBorderColor:darken(@formDefBorderColor,20%);
+
+.formInput{
+  background: #fff;
+  color:@formDefColor;
+  border:1px solid #ccc;
+  .border-radius(1px);
+}
+.formInputFocus{
+  color:@formFocusColor;
+  border-color:@formFocusBorderColor;
+}
+.formInputHover{
+  color:@formHoverColor;
+  border-color:@formHoverBorderColor;
+}
+/******************************************/
+
+//Grid
+//grid.less
+@columnCount:12;
+
+@gridPadding:5px;
+
+@columnPadding:0 @gridPadding;
+.columnGutter(@size:@columnPadding){
+  padding:@size;
+}
+@containerPadding:@gridPadding * 2;
+.containerGutter(@size:@containerPadding){
+  padding:@size;
+}
+/******************************************/
+
+//Responsive breakpoints
+//responsive.less
+@breakpointLarge:1200px;
+@breakpointMedium:980px;
+@breakpointSmall:767px;
+@breakpointMini:480px;
+/******************************************/

@@ -1,0 +1,23 @@
+input, select, textarea, button {
+  .box-sizing(~'border-box');
+  vertical-align: top;
+  &:focus{
+	.formInputFocus();
+  }
+  &:hover{
+	.formInputHover();
+  }
+}
+input,textarea,select{
+  .formInput();
+}
+
+select{
+  padding:1px 4px;
+}
+input,textarea{
+  padding:2px 4px;
+}
+input,select{
+  min-height: 25px;
+}

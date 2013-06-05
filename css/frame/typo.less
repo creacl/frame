@@ -1,0 +1,33 @@
+body {
+  .defFontStyle();
+}
+h1,h2,h3,h4,h5,h6{
+  .headerFontStyle();
+}
+@headers:@headerCount;
+
+.headerClass (@index,@color:@headerDefColor,@docolorize:@headerColorize) when (@index > 0) {
+  @columnSize:100 / @columns ;
+
+  (~"h@{index}") {
+	@c:lighten(@color,(10*@index));
+
+	.colorize(@docolorize,@color:@c) when (@docolorize = true){
+	  color:@color;
+	}
+	.colorize(@docolorize);
+
+	font-size:(@headerSizeMax / @index) + @headerSizeLower;
+  }
+  .headerClass(@index - 1);
+}
+.headerClass (0) {}
+.headerClass (@headers,);
+
+a{
+  .linkStyle();
+}
+
+input, select, textarea, button {
+  .formFont();
+}

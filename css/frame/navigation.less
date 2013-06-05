@@ -1,0 +1,39 @@
+.nav{
+  margin:0;
+  padding:0;
+  list-style: none;
+  a,.text{
+	display: block;
+  }
+  a{
+	.border-radius(2px);
+  }
+  &-h{
+	li{
+	  display: inline-block;
+	}
+  }
+  &-v{
+	li{
+	  display:block;
+	}
+  }
+}
+.navbar{
+  li{
+	margin-left:5px;
+	&:first-child{
+	  margin-left:0;
+	}
+  }
+  a,.text{
+	padding:6px 10px;
+  }
+  .container{
+	padding-top:4px;
+	padding-bottom:4px;
+  }
+  .row{
+	min-height:29px;
+  }
+}
