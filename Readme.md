@@ -21,7 +21,7 @@ Micro less framework
 ## Автор
 **Eugene 'kaaboeld' Popov**
 
-+ https://github.com/kaaboeld/frame]
++ https://github.com/kaaboeld/frame
 + http://scrw.co
 
 ## Лицензия
