@@ -3,44 +3,68 @@
 @breakpointSmallMin: @breakpointSmall+1;
 @breakpointMiniMin: @breakpointMini + 1;
 
-.visbileClass(@media){
-  (~".v-@{media}-hidden") {
-	display: none !important;
+  .visbileClass(@media){
+(~".v-@{media}-hidden") {
+  display: none !important;
+}
+
+(~".v-@{media}-visible") {
+  display: block;
+}
+
+}
+  .columnSizeClass(@media,@size:100,@units:"%"){
+  @width: ~"@{size}@{units}";
+  @name: ~".c-@{media}-@{size}@{units}";
+  .units(@units) when (@units = "%") {
+	@width: percentage(@size) * 0.01;
+	@name: ~".c-@{media}-@{size}";
   }
-  (~".v-@{media}-visible") {
-	display: block;
-  }
+  .units(@units);
+
+(~"@{name}") {
+  width: @width;
+}
+
 }
 
 //Large display and up
 //XLarge
 @media only screen and (min-width: @breakpointLargeMin) {
-  .visbileClass('xlarge');
+  @scale: 'xlarge';
+  .visbileClass(@scale);
+  .columnSizeClass(@scale,760,px);
 }
 
 //Desktop to Large display
 //Large
 @media only screen and (min-width: @breakpointMediumMin) and (max-width: @breakpointLarge) {
-  .visbileClass('large');
+  @scale: 'large';
+  .visbileClass(@scale);
+  .columnSizeClass(@scale,760,'px');
 }
 
 //Tablet to desktop
 //Medium
 @media only screen and (min-width: @breakpointSmallMin) and (max-width: @breakpointMedium) {
-  .visbileClass('medium');
+  @scale: 'medium';
+  .visbileClass(@scale);
+  .columnSizeClass(@scale,760,'px');
+  .columnSizeClass(@scale,100)
 }
 
 //Mobile phone to tablet
 //Small
 @media only screen and (min-width: @breakpointMiniMin) and (max-width: @breakpointSmall) {
-  .visbileClass('small');
+  @scale: 'small';
+  .visbileClass(@scale);
+
 }
 
 //Mobile phone
 //Mini
 @media only screen and(max-width: @breakpointMini) {
-  .visbileClass('mini');
-  .col{
-	width:100%;
-  }
+  @scale: 'mini';
+  .visbileClass(@scale);
+
 }
