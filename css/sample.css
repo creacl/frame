@@ -149,21 +149,25 @@ textarea {
 * Changing values in this file or from main style file
 *
 **/
+body {
+  color: #333333;
+}
 /******************************************/
 .formFont {
-  font-family: 'PT Sans';
+  font-family: 'Roboto';
   font-size: 1em;
   line-height: 1em;
 }
 .formInput {
+  font-size: 120%;
   background: #fff;
   color: #666666;
   border: 1px solid #ccc;
-  -webkit-border-radius: 1px;
+  -webkit-border-radius: 2px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 1px;
+  -moz-border-radius: 2px;
   -moz-background-clip: padding;
-  border-radius: 1px;
+  border-radius: 2px;
   background-clip: padding-box;
 }
 .formInputFocus {
@@ -174,10 +178,14 @@ textarea {
   color: #4d4d4d;
   border-color: #b3b3b3;
 }
+::selection {
+  background: #ff0;
+  color: #333333;
+}
 /******************************************/
 /******************************************/
 /******************************************/body {
-  font-family: 'PT Sans';
+  font-family: 'Roboto';
   font-size: 1em;
 }
 h1,
@@ -191,28 +199,22 @@ h6 {
   margin-bottom: 0.25em;
 }
 h6 {
-  color: #999999;
-  font-size: 133.33333333333334%;
-}
-h5 {
-  color: #808080;
-  font-size: 140%;
-}
-h4 {
-  color: #666666;
-  font-size: 150%;
-}
-h3 {
-  color: #4d4d4d;
   font-size: 166.66666666666669%;
 }
-h2 {
-  color: #333333;
+h5 {
+  font-size: 180%;
+}
+h4 {
   font-size: 200%;
 }
-h1 {
-  color: #1a1a1a;
+h3 {
+  font-size: 233.33333333333334%;
+}
+h2 {
   font-size: 300%;
+}
+h1 {
+  font-size: 500%;
 }
 a {
   text-decoration: none;
@@ -228,9 +230,15 @@ input,
 select,
 textarea,
 button {
-  font-family: 'PT Sans';
+  font-family: 'Roboto';
   font-size: 1em;
   line-height: 1em;
+}
+blockquote {
+  display: block;
+}
+p {
+  line-height: 1.4em;
 }
 input,
 select,
@@ -258,14 +266,15 @@ button:hover {
 input,
 textarea,
 select {
+  font-size: 120%;
   background: #fff;
   color: #666666;
   border: 1px solid #ccc;
-  -webkit-border-radius: 1px;
+  -webkit-border-radius: 2px;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 1px;
+  -moz-border-radius: 2px;
   -moz-background-clip: padding;
-  border-radius: 1px;
+  border-radius: 2px;
   background-clip: padding-box;
 }
 select {
@@ -279,6 +288,54 @@ input,
 select {
   min-height: 25px;
 }
+input[type='file'] {
+  padding: 0;
+  border: none;
+}
+label,
+button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+label.checkbox,
+label .radio {
+  color: #777;
+  cursor: pointer;
+}
+label.checkbox:hover,
+label .radio:hover {
+  color: #555;
+}
+label.checkbox:active,
+label .radio:active {
+  color: #444;
+}
+button,
+.button {
+  padding: 4px 12px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.button {
+  padding: 0 7px;
+  height: 27px;
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 26px;
+}
+.input-file-wrapper {
+  display: inline-block;
+  width: 30px;
+}
+.input-file-wrapper input {
+  margin-left: -145px;
+  opacity: 0;
+}
+.action-upload {
+  z-index: 1000;
+  position: absolute;
+}
 .nav {
   margin: 0;
   padding: 0;
@@ -287,30 +344,16 @@ select {
 .nav a,
 .nav .text {
   display: block;
+  padding: 6px 8px;
 }
-.nav a {
-  -webkit-border-radius: 2px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 2px;
-  -moz-background-clip: padding;
-  border-radius: 2px;
-  background-clip: padding-box;
+.nav a [class*='icon-'] {
+  margin-right: 4px;
 }
 .nav-h li {
   display: inline-block;
 }
 .nav-v li {
   display: block;
-}
-.navbar li {
-  margin-left: 5px;
-}
-.navbar li:first-child {
-  margin-left: 0;
-}
-.navbar a,
-.navbar .text {
-  padding: 6px 10px;
 }
 .navbar .container {
   padding-top: 4px;
@@ -340,23 +383,23 @@ select {
   float: left;
   padding: 0 5px;
 }
-.pos-center {
+.p-center {
   float: none;
   margin: 0 auto;
 }
-.pos-left {
+.p-left {
   float: left;
 }
-.pos-right {
+.p-right {
   float: right;
 }
-.pos-text-center {
+.p-text-center {
   text-align: center;
 }
-.pos-text-left {
+.p-text-left {
   text-align: left;
 }
-.pos-text-right {
+.p-text-right {
   text-align: right;
 }
 .container {
@@ -441,6 +484,9 @@ select {
   .v-small-visible {
     display: block;
   }
+  .c-small-100 {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 480px) {
   .v-mini-hidden {
@@ -449,6 +495,18 @@ select {
   .v-mini-visible {
     display: block;
   }
+  .c-mini-100 {
+    width: 100%;
+  }
+}
+.v-all-hidden {
+  display: none !important;
+}
+.v-all-visible {
+  display: block;
+}
+.c-all-100 {
+  width: 100%;
 }
 .section-sample {
   border: 1px solid #eee;

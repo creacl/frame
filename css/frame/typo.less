@@ -7,9 +7,9 @@ h1,h2,h3,h4,h5,h6{
 @headers:@headerCount;
 
 .headerClass (@index,@color:@headerDefColor,@docolorize:@headerColorize) when (@index > 0) {
-  @columnSize:100 / @columns ;
+  @columnSize:(100 / @columns);
 
-  (~"h@{index}") {
+  h@{index} {
 	@c:lighten(@color,(10*@index));
 
 	.colorize(@docolorize,@color:@c) when (@docolorize = true){
@@ -22,7 +22,7 @@ h1,h2,h3,h4,h5,h6{
   .headerClass(@index - 1);
 }
 .headerClass (0) {}
-.headerClass (@headers,);
+.headerClass (@headers);
 
 a{
   .linkStyle();
@@ -30,4 +30,10 @@ a{
 
 input, select, textarea, button {
   .formFont();
+}
+blockquote{
+  display: block;
+}
+p{
+  line-height: 1.4em;
 }

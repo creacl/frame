@@ -4,9 +4,12 @@
   list-style: none;
   a,.text{
 	display: block;
+	padding:6px 8px;
   }
   a{
-	.border-radius(2px);
+	[class*='icon-']{
+	  margin-right:4px;
+	}
   }
   &-h{
 	li{
@@ -18,17 +21,9 @@
 	  display:block;
 	}
   }
+
 }
 .navbar{
-  li{
-	margin-left:5px;
-	&:first-child{
-	  margin-left:0;
-	}
-  }
-  a,.text{
-	padding:6px 10px;
-  }
   .container{
 	padding-top:4px;
 	padding-bottom:4px;

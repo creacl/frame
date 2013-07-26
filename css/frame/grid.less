@@ -19,7 +19,7 @@
 	float:left;
 	.columnGutter();
 }
-.pos{
+.p{
   &-center{
 	float:none;
 	margin:0 auto;
@@ -47,8 +47,8 @@
 }
 
 .colClass (@index) when (@index > 0) {
-	@columnSize:100 / @columns ;
-	(~".col-@{index}") {
+	@columnSize:(100 / @columns);
+	.col-@{index} {
 		width:percentage((@columnSize * @index)) * 0.01;
 	}
 	.colClass(@index - 1);
