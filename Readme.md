@@ -3,8 +3,8 @@ Micro less framework
 
 ## Внешние библиотеки
 
-+ Eric Meyer's Reset CSS v2.0
-+ LESS Hat 3.0.2
++ [Eric Meyer's Reset CSS v2.0](http://lesshat.madebysource.com/)
++ [LESS Hat 3.0.2](http://www.cssreset.com/scripts/eric-meyer-reset-css/)
 
 ## Особенности
 
