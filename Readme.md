@@ -1,10 +1,10 @@
-# Frame
+# Frame 0.9.0
 Micro less framework
 
 ## Внешние библиотеки
 
 + Eric Meyer's Reset CSS v2.0
-+ LESS Hat 1.1.1
++ LESS Hat 3.0.2
 
 ## Особенности
 
@@ -22,7 +22,6 @@ Micro less framework
 **Eugene 'kaaboeld' Popov**
 
 + https://github.com/kaaboeld/frame
-+ http://scrw.co
 
 ## Лицензия
 

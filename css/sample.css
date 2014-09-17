@@ -1,7 +1,7 @@
 /**
- * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
- * http://cssreset.com
- */
+* Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+* http://cssreset.com
+*/
 html,
 body,
 div,
@@ -154,7 +154,7 @@ body {
 }
 /******************************************/
 .formFont {
-  font-family: 'Roboto';
+  font-family: 'PT Sans';
   font-size: 1em;
   line-height: 1em;
 }
@@ -184,8 +184,9 @@ body {
 }
 /******************************************/
 /******************************************/
-/******************************************/body {
-  font-family: 'Roboto';
+/******************************************/
+body {
+  font-family: 'PT Sans';
   font-size: 1em;
 }
 h1,
@@ -194,7 +195,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'PT Sans Narrow';
+  font-family: 'PT Sans';
   font-size: 1em;
   margin-bottom: 0.25em;
 }
@@ -230,7 +231,7 @@ input,
 select,
 textarea,
 button {
-  font-family: 'Roboto';
+  font-family: 'PT Sans';
   font-size: 1em;
   line-height: 1em;
 }
@@ -297,6 +298,7 @@ button {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
 }
 label.checkbox,
 label .radio {
@@ -517,18 +519,6 @@ button,
   border-radius: 3px;
   background-clip: padding-box;
   margin-bottom: 40px;
-}
-.section-sample-title {
-  font-family: monospace;
-  font-size: 10px;
-  margin-top: 0px;
-  margin-left: -5px;
-}
-.section-sample-title:before {
-  content: '<';
-}
-.section-sample-title:after {
-  content: '/>';
 }
 .section-sample.grid-test .col {
   text-align: center;

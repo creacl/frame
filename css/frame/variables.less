@@ -7,113 +7,122 @@
 
 //Typo
 //typo.less
-@textSize:1em;
-@textColor:#333;
-@textFormFontSize:120%;//@textSize;
+@textSize: 1em;
+@textColor: #333;
+@textFormFontSize: 120%;
+//@textSize;
 //Link variables
 @linkDefColor: #4097cf;
-@linkHoverColor:darken(@linkDefColor,20%);
-@linkVisitedColor:@linkDefColor;
-@linkActiveColor:darken(@linkHoverColor,10%);
+@linkHoverColor: darken(@linkDefColor, 20%);
+@linkVisitedColor: @linkDefColor;
+@linkActiveColor: darken(@linkHoverColor, 10%);
 
-.linkStyle(@def:@linkDefColor,@hover:@linkHoverColor,@active:@linkActiveColor,@visited:@linkVisitedColor,@underline:none,@setvisited:false){
-  text-decoration: @underline;
-  color:@def;
-  &:hover{
-	color:@hover;
-  }
-  &:active{
-	color:@active;
-  }
-  &:visited{
-	.visited(@setvisited) when (@setvisited = true){
-	  color:@visited;
+.linkStyle(@def:@linkDefColor,@hover:@linkHoverColor,@active:@linkActiveColor,@visited:@linkVisitedColor,@underline:none,@setvisited:false) {
+	text-decoration: @underline;
+	color: @def;
+	&:hover {
+		color: @hover;
 	}
-	.visited(@setvisited);
-  }
+	&:active {
+		color: @active;
+	}
+	&:visited {
+		.visited(@setvisited) when (@setvisited = true) {
+			color: @visited;
+		}
+		.visited(@setvisited);
+	}
 }
-body{
-  color:@textColor;
+
+body {
+	color: @textColor;
 }
+
 //Text default style
-.defFontStyle(@fontFamily:'Roboto'){
-  font-family: @fontFamily;
-  font-size:@textSize;
+.defFontStyle(@fontFamily:'PT Sans') {
+	font-family: @fontFamily;
+	font-size: @textSize;
 }
 
 //Header variables
-@headerSizeMax:400%;
-@headerSizeLower:100%;
-@headerCount:6;
-@headerDefColor:@textColor;
-@headerColorize:false;
+@headerSizeMax: 400%;
+@headerSizeLower: 100%;
+@headerCount: 6;
+@headerDefColor: @textColor;
+@headerColorize: false;
 
-.headerFontStyle(@fontFamily:'PT Sans Narrow'){
-  font-family: @fontFamily;
-  font-size:@textSize;
-  margin-bottom:@textSize / 4;
+.headerFontStyle(@fontFamily:'PT Sans') {
+	font-family: @fontFamily;
+	font-size: @textSize;
+	margin-bottom: @textSize / 4;
 }
 
 /******************************************/
 
 //Form elements
 //form.less
-.formFont{
-  .defFontStyle();
-  line-height:1em;
+.formFont {
+	.defFontStyle();
+	line-height: 1em;
 }
-@formDefColor:#666;
-@formHoverColor:darken(@formDefColor,10%);
-@formFocusColor:darken(@formDefColor,20%);
 
-@formDefBorderColor:#ccc;
-@formHoverBorderColor:darken(@formDefBorderColor,10%);
-@formFocusBorderColor:darken(@formDefBorderColor,20%);
+@formDefColor: #666;
+@formHoverColor: darken(@formDefColor, 10%);
+@formFocusColor: darken(@formDefColor, 20%);
 
-.formInput{
-  font-size: @textFormFontSize;
-  background: #fff;
-  color:@formDefColor;
-  border:1px solid #ccc;
-  .border-radius(2px);
+@formDefBorderColor: #ccc;
+@formHoverBorderColor: darken(@formDefBorderColor, 10%);
+@formFocusBorderColor: darken(@formDefBorderColor, 20%);
+
+.formInput {
+	font-size: @textFormFontSize;
+	background: #fff;
+	color: @formDefColor;
+	border: 1px solid #ccc;
+	.border-radius(2px);
 
 }
-.formInputFocus{
-  color:@formFocusColor;
-  border-color:@formFocusBorderColor;
+
+.formInputFocus {
+	color: @formFocusColor;
+	border-color: @formFocusBorderColor;
 }
-.formInputHover{
-  color:@formHoverColor;
-  border-color:@formHoverBorderColor;
+
+.formInputHover {
+	color: @formHoverColor;
+	border-color: @formHoverBorderColor;
 }
-::selection{
-  background: #ff0;
-  color:@textColor;
+
+::selection {
+	background: #ff0;
+	color: @textColor;
 }
 
 /******************************************/
 
 //Grid
 //grid.less
-@columnCount:12;
+@columnCount: 12;
 
-@gridPadding:5px;
+@gridPadding: 5px;
 
-@columnPadding:0 @gridPadding;
-.columnGutter(@size:@columnPadding){
-  padding:@size;
+@columnPadding: 0 @gridPadding;
+.columnGutter(@size:@columnPadding) {
+	padding: @size;
 }
-@containerPadding:@gridPadding * 2;
-.containerGutter(@size:@containerPadding){
-  padding:@size;
+
+@containerPadding: @gridPadding * 2;
+.containerGutter(@size:@containerPadding) {
+	padding: @size;
 }
+
 /******************************************/
 
 //Responsive breakpoints
 //responsive.less
-@breakpointLarge:1200px;
-@breakpointMedium:980px;
-@breakpointSmall:767px;
-@breakpointMini:480px;
+@breakpointLarge: 1200px;
+@breakpointMedium: 980px;
+@breakpointSmall: 767px;
+@breakpointMini: 480px;
 
 /******************************************/

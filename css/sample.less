@@ -1,41 +1,26 @@
 @import "frame/base";
 
-@gridColBgColor:#9ba922;
+@gridColBgColor: #9ba922;
 
-.section{
-  &-sample{
-	border:1px solid #eee;
-	.border-radius(3px);
-	margin-bottom:40px;
-	&-title{
-	  font-family: monospace;
-	  font-size:10px;
-	  margin-top: 0px;
-	  margin-left:-5px;
-
-	  &:before{
-		content:'<';
-	  }
-
-	  &:after{
-		content:'/>';
-	  }
-	}
-	&.grid{
-	  &-test{
-		.col{
-		  text-align:center;
-		  padding-top:10px;
-		  padding-bottom:10px;
-		  background: fade(@gridColBgColor,90%);
-		  border:2px solid #fff;
-		  color:#fff;
-		  &:hover{
-			background: fade(@gridColBgColor,100%);
-		  }
+.section {
+	&-sample {
+		border: 1px solid #eee;
+		.border-radius(3px);
+		margin-bottom: 40px;
+		&.grid {
+			&-test {
+				.col {
+					text-align: center;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					background: fade(@gridColBgColor, 90%);
+					border: 2px solid #fff;
+					color: #fff;
+					&:hover {
+						background: fade(@gridColBgColor, 100%);
+					}
+				}
+			}
 		}
-	  }
 	}
-  }
 }
-
