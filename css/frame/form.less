@@ -9,6 +9,18 @@ input, select, textarea, button {
 	}
 }
 
+button{
+	color: @buttonDefColor;
+	background: @buttonDefBackground;
+
+	&:active{
+		.formInputActive();
+	}
+	&:hover,&:focus {
+		.formButtonHover();
+	}
+}
+
 input, textarea, select {
 	.formInput();
 }
@@ -35,7 +47,6 @@ label, button {
 }
 
 label {
-
 	&.checkbox, .radio {
 		color: #777;
 		cursor: pointer;

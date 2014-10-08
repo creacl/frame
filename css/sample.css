@@ -154,20 +154,20 @@ body {
 }
 /******************************************/
 .formFont {
-  font-family: 'PT Sans';
+  font-family: sans-serif;
   font-size: 1em;
   line-height: 1em;
 }
 .formInput {
   font-size: 120%;
-  background: #fff;
+  background: #ffffff;
   color: #666666;
   border: 1px solid #ccc;
-  -webkit-border-radius: 2px;
+  -webkit-border-radius: 0;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 2px;
+  -moz-border-radius: 0;
   -moz-background-clip: padding;
-  border-radius: 2px;
+  border-radius: 0;
   background-clip: padding-box;
 }
 .formInputFocus {
@@ -178,6 +178,14 @@ body {
   color: #4d4d4d;
   border-color: #b3b3b3;
 }
+.formInputActive {
+  color: #4d4d4d;
+  border-color: #b3b3b3;
+}
+.formButtonHover {
+  color: #444444;
+  border-color: #b3b3b3;
+}
 ::selection {
   background: #ff0;
   color: #333333;
@@ -186,7 +194,7 @@ body {
 /******************************************/
 /******************************************/
 body {
-  font-family: 'PT Sans';
+  font-family: sans-serif;
   font-size: 1em;
 }
 h1,
@@ -195,12 +203,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'PT Sans';
+  font-family: sans-serif;
   font-size: 1em;
   margin-bottom: 0.25em;
 }
 h6 {
-  font-size: 166.66666666666669%;
+  font-size: 166.66666667%;
 }
 h5 {
   font-size: 180%;
@@ -209,7 +217,7 @@ h4 {
   font-size: 200%;
 }
 h3 {
-  font-size: 233.33333333333334%;
+  font-size: 233.33333333%;
 }
 h2 {
   font-size: 300%;
@@ -231,7 +239,7 @@ input,
 select,
 textarea,
 button {
-  font-family: 'PT Sans';
+  font-family: sans-serif;
   font-size: 1em;
   line-height: 1em;
 }
@@ -264,18 +272,31 @@ button:hover {
   color: #4d4d4d;
   border-color: #b3b3b3;
 }
+button {
+  color: #444444;
+  background: #aaaaaa;
+}
+button:active {
+  color: #4d4d4d;
+  border-color: #b3b3b3;
+}
+button:hover,
+button:focus {
+  color: #444444;
+  border-color: #b3b3b3;
+}
 input,
 textarea,
 select {
   font-size: 120%;
-  background: #fff;
+  background: #ffffff;
   color: #666666;
   border: 1px solid #ccc;
-  -webkit-border-radius: 2px;
+  -webkit-border-radius: 0;
   -webkit-background-clip: padding-box;
-  -moz-border-radius: 2px;
+  -moz-border-radius: 0;
   -moz-background-clip: padding;
-  border-radius: 2px;
+  border-radius: 0;
   background-clip: padding-box;
 }
 select {
@@ -411,37 +432,37 @@ button,
   width: 100%;
 }
 .col-11 {
-  width: 91.66666666666669%;
+  width: 91.66666667%;
 }
 .col-10 {
-  width: 83.33333333333334%;
+  width: 83.33333333%;
 }
 .col-9 {
   width: 75%;
 }
 .col-8 {
-  width: 66.66666666666667%;
+  width: 66.66666667%;
 }
 .col-7 {
-  width: 58.33333333333334%;
+  width: 58.33333333%;
 }
 .col-6 {
   width: 50%;
 }
 .col-5 {
-  width: 41.66666666666667%;
+  width: 41.66666667%;
 }
 .col-4 {
-  width: 33.333333333333336%;
+  width: 33.33333333%;
 }
 .col-3 {
   width: 25%;
 }
 .col-2 {
-  width: 16.666666666666668%;
+  width: 16.66666667%;
 }
 .col-1 {
-  width: 8.333333333333334%;
+  width: 8.33333333%;
 }
 @media only screen and (min-width: 1201px) {
   .v-xlarge-hidden {

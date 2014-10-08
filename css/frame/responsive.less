@@ -14,8 +14,7 @@
 
 }
 @unitsDef: ~"%";
-.columnSizeClass(@media, @size: 100, @units:@unitsDef)
-{
+.columnSizeClass(@media, @size: 100, @units:@unitsDef){
 	@width: ~"@{size}@{units}";
 //@name: ~".c-@{media}-@{size}@{units}";
 	.units(@units) when (@units = @unitsDef) {

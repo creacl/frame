@@ -10,6 +10,11 @@
 @textSize: 1em;
 @textColor: #333;
 @textFormFontSize: 120%;
+
+@defFontFamily: 'Roboto';
+@headerFontFamily: 'Roboto';
+
+
 //@textSize;
 //Link variables
 @linkDefColor: #4097cf;
@@ -39,7 +44,7 @@ body {
 }
 
 //Text default style
-.defFontStyle(@fontFamily:'PT Sans') {
+.defFontStyle(@fontFamily:@defFontFamily) {
 	font-family: @fontFamily;
 	font-size: @textSize;
 }
@@ -51,7 +56,7 @@ body {
 @headerDefColor: @textColor;
 @headerColorize: false;
 
-.headerFontStyle(@fontFamily:'PT Sans') {
+.headerFontStyle(@fontFamily:@headerFontFamily) {
 	font-family: @fontFamily;
 	font-size: @textSize;
 	margin-bottom: @textSize / 4;
@@ -74,12 +79,16 @@ body {
 @formHoverBorderColor: darken(@formDefBorderColor, 10%);
 @formFocusBorderColor: darken(@formDefBorderColor, 20%);
 
+@formDefBackground:#fff;
+@buttonDefBackground:#aaa;
+@buttonDefColor:#444;
+
 .formInput {
 	font-size: @textFormFontSize;
-	background: #fff;
+	background: @formDefBackground;
 	color: @formDefColor;
 	border: 1px solid #ccc;
-	.border-radius(2px);
+	.border-radius(0);
 
 }
 
@@ -90,6 +99,15 @@ body {
 
 .formInputHover {
 	color: @formHoverColor;
+	border-color: @formHoverBorderColor;
+}
+.formInputActive {
+	color: @formHoverColor;
+	border-color: @formHoverBorderColor;
+}
+
+.formButtonHover {
+	color: @buttonDefColor;
 	border-color: @formHoverBorderColor;
 }
 
